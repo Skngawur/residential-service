@@ -3,14 +3,14 @@ import { Card } from 'antd';
 import PropTypes from "prop-types";
 import { ArrowUpOutlined, ArrowDownOutlined } from '@ant-design/icons';
 
-const StatisticWidget = ({ style,title, value, status, subtitle, prefix }) => {
+const StatisticWidget = ({ style,title, value, status, colorValue, subtitle, prefix }) => {
 	return (
 		<Card style={style} >
 			{title && <h4 style={style} className="mb-0">{title}</h4>}
 			<div style={style} className={`${prefix? 'd-flex': ''} ${title ? 'mt-3':''}`}>
 				{prefix ? <div style={style} className="mr-2">{prefix}</div> : null}
 				<div>
-				<h1 style={{textAlign:"center"}} className="mb-0 font-weight-bold">{value}</h1>
+				<h1 style={{textAlign:"center", color: colorValue}} className="mb-0 font-weight-bold">{value}</h1>
 					<div style={{textAlign:"center"}}  className="d-flex align-items-center">
 						{/* <h1 style={{textAlign:"center"}} className="mb-0 font-weight-bold">{value}</h1> */}
 						{/* {

@@ -12,6 +12,7 @@ spring:
       max-lifetime: 1800000
       minimumIdle: 10
       maximum-pool-size: 1000
+    driver-class-name: org.postgresql.Driver
   jpa:
     properties:
       hibernate:

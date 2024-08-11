@@ -59,8 +59,11 @@ const DetailHouse = ({ type = ADD, param }) => {
 					await dispatch(addHouses(request)).unwrap()
 						.then(async () => {
 							setSubmitLoading(true)
+							history.push(strings.navigation.path.houses.list)
 						})
-						.finally(() => history.push(strings.navigation.path.houses.list))
+						.catch((err) => {
+							message.error(err.response.data.message)
+						})
 				}
 			})
 			.catch(info => {
@@ -91,7 +94,7 @@ const DetailHouse = ({ type = ADD, param }) => {
 		: 'Tambah Hunian Warga'
 
 	const titleCard = type === EDIT
-		? `${selected?.unit} / ${selected?.owner}`
+		? `${ selected?.unit } / ${ selected?.owner }`
 		: ''
 
 	return (

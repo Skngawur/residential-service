@@ -123,8 +123,8 @@ export const Houses = () => {
 			onFilter: (value, record) => record.ownershipStatus.indexOf(value) === 0,
 			render: (_, record) => {
 				const enums = {
-					"Hak Milik": "blue",
-					"Sewa": "green",
+					"HAK MILIK": "blue",
+					"SEWA": "green",
 				}
 				return (
 					<span>

@@ -13,7 +13,7 @@ import java.io.Serializable;
 public record HomeInformationRequest(
         String unit,
         String owner,
-        OwnershipStatus ownershipStatus,
+        String ownershipStatus,
         String homeCondition,
         @PhoneNumber
         String phoneNumber) implements Serializable {

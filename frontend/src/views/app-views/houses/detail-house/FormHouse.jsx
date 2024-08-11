@@ -69,7 +69,8 @@ const FormHouse = ({
 							label="Status Kepemilikan Rumah"
 							rules={ rules.house.field.ownershipStatus }
 						>
-							<Select options={ ownershipStatus } placeholder="Pilih salah satu"/>
+							<Input placeholder="Masukkan Status Kemilikan Rumah SEWA / HAK MILIK"/>
+							{/*<Select options={ ownershipStatus } placeholder="Pilih salah satu"/>*/}
 						</Form.Item>
 					</Col>
 				</Row>
